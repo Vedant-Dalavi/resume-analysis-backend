@@ -51,7 +51,6 @@ __tests__/__snapshots__/
 
 # Sensitive Information (Never commit these!)
 
-config/
 .htpasswd
 
 # Specific to your project (add as needed)
