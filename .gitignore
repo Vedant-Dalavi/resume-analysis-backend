@@ -1,0 +1,110 @@
+# Node.js and Common
+
+node_modules/
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Editor and IDE Files
+
+.idea/
+.vscode/
+*.swp
+*~
+*.tmp
+*.bak
+*.lock
+
+# OS Specific
+
+.cache/
+Thumbs.db
+ehthumbs.db
+
+# Deployment
+
+.ebextensions/
+.elasticbeanstalk/
+.platform/
+.serverless/
+dist/
+build/
+*.zip
+*.tar
+*.gz
+
+# Logs and Data
+
+logs/
+*.log
+*.out
+*.err
+data/
+
+# Testing
+
+__tests__/__snapshots__/
+*.test.js.snap
+
+# Sensitive Information (Never commit these!)
+
+config/
+.htpasswd
+
+# Specific to your project (add as needed)
+
+# Example: If you have a specific folder for uploads that you don't want to track
+uploads/
+
+# Example: If you have temporary files
+temp/
+
+# Example: Specific files
+somefile.txt
+anotherfile.json
+
+# Example: Packages or build artifacts
+package-lock.json  # If you use npm
+yarn.lock         # If you use yarn
+
+# For Python projects
+__pycache__/
+*.pyc
+
+# For Java projects
+*.class
+*.jar
+*.war
+*.ear
+
+# For Go projects
+bin/
+
+# For C++ projects
+*.o
+*.exe
+
+# Docker
+.dockerignore
+
+# Kubernetes
+.kube/
+
+# Terraform
+.terraform*
+
+# Serverless Framework
+.serverless
+
+# Cloud providers
+.aws/
+.gcp/
+.azure/
+
+# Other
+
+.history
+.ropeproject
