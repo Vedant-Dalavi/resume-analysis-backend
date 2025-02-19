@@ -62,13 +62,19 @@ exports.extractResumeData = async (req, res) => {
             }
         );
 
+        if (!geminiResponse.data.candidates[0].content.parts[0].text) {
+            return res.status(404).json({
+                message: "Gemini API did not send any responce"
+            })
+        }
+
 
         let llmResult = geminiResponse.data.candidates[0].content.parts[0].text;
 
         llmResult = llmResult.replace(/```json\n/g, ''); // Remove ```json\n at the beginning
         llmResult = llmResult.replace(/```/g, '');       // Remove ``` at the end or anywhere else
 
-    
+
 
         let parsedData;
         try {
@@ -128,7 +134,7 @@ exports.searchResume = async (req, res) => {
             const searchTokens = name.toLowerCase().split(/\s+/);        // Split search term into words
 
             return searchTokens.every(token =>
-                nameParts.some(namePart => namePart.startsWith(token))
+                nameParts.some(namePart => namePart.includes(token))
             );
         });
 
