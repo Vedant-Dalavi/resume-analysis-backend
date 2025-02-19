@@ -68,7 +68,7 @@ exports.extractResumeData = async (req, res) => {
         llmResult = llmResult.replace(/```json\n/g, ''); // Remove ```json\n at the beginning
         llmResult = llmResult.replace(/```/g, '');       // Remove ``` at the end or anywhere else
 
-        console.log("LLM Result:", llmResult);
+    
 
         let parsedData;
         try {
